@@ -1,24 +1,15 @@
-# README
+# Gymsales test backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Deploy
 
-Things you may want to cover:
+```
+git push heroku master
+heroku run rake db:migrate
+```
 
-* Ruby version
+## Tests
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rake db:test:prepare
+rspec
+```

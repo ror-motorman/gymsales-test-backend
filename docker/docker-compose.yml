@@ -5,12 +5,25 @@ ruby:
         - ./data/bundle:/usr/local/bundle/
     links:
         - db
+        - db_test
     ports:
         - 3000:3000
     tty: true
+    environment:
+        DATABASE_URL: postgresql://postgres:root@db/gymsales?pool=5
+        TEST_DATABASE_HOST: db_test
+        TEST_DATABASE_PASSWORD: root
+        CLEARBIT_KEY: $CLEARBIT_KEY
+        GOOGLE_KEY: $GOOGLE_KEY
 
 db:
     image: postgres:10.2
     environment:
         POSTGRES_PASSWORD: root
-        POSTGRES_DB: gymsales-test-development
+        POSTGRES_DB: gymsales
+
+db_test:
+    image: postgres:10.2
+    environment:
+        POSTGRES_PASSWORD: root
+        POSTGRES_DB: gymsales
