@@ -1,0 +1,16 @@
+ruby:
+    build: ./ruby
+    volumes:
+        - ../:/var/www
+        - ./data/bundle:/usr/local/bundle/
+    links:
+        - db
+    ports:
+        - 3000:3000
+    tty: true
+
+db:
+    image: postgres:10.2
+    environment:
+        POSTGRES_PASSWORD: root
+        POSTGRES_DB: gymsales-test-development
