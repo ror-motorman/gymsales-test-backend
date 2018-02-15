@@ -41,6 +41,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Auth
+gem 'devise', git: 'https://github.com/plataformatec/devise', ref: '88e9a85'
 gem 'devise_token_auth'
 
 # Clearbit

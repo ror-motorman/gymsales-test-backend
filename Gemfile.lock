@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/plataformatec/devise
+  revision: 88e9a85d6a796a41f4dcf2528ed6d5f48916b5fd
+  ref: 88e9a85
+  specs:
+    devise (4.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.2)
+      responders
+      warden (~> 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,12 +58,6 @@ GEM
       nestful (~> 1.1.0)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
-    devise (4.3.0)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.2)
-      responders
-      warden (~> 1.2.3)
     devise_token_auth (0.1.42)
       devise (> 3.5.2, <= 4.3)
       rails (< 6)
@@ -195,6 +201,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   clearbit
+  devise!
   devise_token_auth
   dry-validation
   google_places
